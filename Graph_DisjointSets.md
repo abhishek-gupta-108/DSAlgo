@@ -10,8 +10,17 @@ Motivation:
 - Implementation
   - Find function: The find function finds the root node of a given vertex.
   - Union function: unions two vertices and makes their root nodes the same.
+
   - Quick Find: TC of Find: O(1) , Union: O(N) , SC - O(N)
       - Instead os Storing the parent index, directly store the root index. This way find becomes O(1). But while doing Union, addition step is required to update the Root of all nodes in one of the compoenent. This can be done by traversing the array and updating nodes that have matching root.
+
   - Quick Union : Find: O(N) , Union: O(N) , SC - O(N)
       - Lazy approach : In Union operation, only one entry's "root" is changed.
       - Think why O(N) for both (and not O(height))
+   
+  - Optimization: Union By Rank :
+  - Optimization: Path Compression :
+ 
+  - TC with Union By rannk and Path Compression:
+    - Find : O(α(V)), where V is no. of vertex and α is **Inverse Ackermann Function**. In practice, we can assume it is constant ie O(1) on average.
+    - Union : Since Union and Connected() both make calls to find, their TC is also O(α(V))
