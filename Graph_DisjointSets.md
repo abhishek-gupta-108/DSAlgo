@@ -24,3 +24,7 @@ Motivation:
   - TC with Union By rannk and Path Compression:
     - Find : O(α(V)), where V is no. of vertex and α is **Inverse Ackermann Function**. In practice, we can assume it is constant ie O(1) on average.
     - Union : Since Union and Connected() both make calls to find, their TC is also O(α(V))
+   
+   Q) Find whether a Graph is valid or not?
+     - Idea is to check if the graph is connected( connected component = 1) and the no. of edges is exactly = 1 (which ensures no cycle)
+     - or, DFS to check if in-degree is exactly 1 and there are no cycles.
