@@ -19,6 +19,11 @@ Sort the edges by weight. Include the first **N-1** minimimum weighted edges suc
 
 ### Prim's Algorithm
 Idea: Start with any vertex. From that find the cost(weight) to reach the adjacent vertex
+```text
+ pick edge with smallest weight crossing the cut.
+
+unlike, Djikstra's SSSP where the idea is to pick vertex with smallest dist[source → v]
+```
 ##### Using Heap:
  Add all the vertices which are not yet in MST in heap which is sorted by weight to reach that node. Take the next node in the heap. Include the first **N-1** minimimum weighted edges such that it does not lead to a cycle.
 
