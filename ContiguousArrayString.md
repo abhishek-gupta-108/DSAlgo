@@ -1,7 +1,7 @@
 
 ##  For Array/Strings(Contiguous Subarray/Substring)
 
-1. Using Binary Search
+### Using Binary Search
    - where a contiguous chunking has to happen in String or Array
    - You are giving a fixed limit that affects how you chunk the array.
    - You have to maximize of minimize the result
