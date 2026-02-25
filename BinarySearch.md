@@ -27,11 +27,11 @@ Summary Table
 |----------|----------------------------|--------------------------------------|
 | Primary Use Case | Finding a specific value (e.g., *Target exists?*) | Finding a threshold/boundary (e.g., *First True*) |
 | While Condition | `while (l <= r)` | `while (l < r)` |
-| Mid Logic (if) | `if (nums[m] == target) return m;` | `if (isFeasible(m)) r = m;` |
-| Left Update | `l = m + 1` | `l = m + 1` |
-| Right Update | `r = m - 1` | `r = m` |
+| Mid Logic (if found) | `if (nums[m] == target) return m;` | `if (isFeasible(m)) r = m;` (keep looking left) |
+| Left Update (If too Small) | `l = m + 1` | `l = m + 1` |
+| Right Update (If too big) | `r = m - 1` | `r = m` |
 | Termination | `l > r` (Range is empty) | `l == r` (One element remains) |
-| Result | Target found or not found | `l` (or `r`) is the answer |
+| Result | Target found or not found, Search ends with l>r | `l` (or `r`) is the answer. Search end with l == r |
 
 
 #### How to avoid the "Infinite Loop" ?
